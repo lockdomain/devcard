@@ -213,4 +213,9 @@
   });
   const fromHash = decodeURIComponent(location.hash.slice(1));
   if (fromHash) { $('user').value = fromHash; load(fromHash); }
+  // also react when someone changes the #name part on an already open page
+  window.addEventListener('hashchange', () => {
+    const u = decodeURIComponent(location.hash.slice(1));
+    if (u && u !== data?.login) { $('user').value = u; load(u); }
+  });
 })();
