@@ -1,0 +1,32 @@
+:root{--bg:#0d1117;--panel:#161b22;--line:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#22c55e;--radius:14px}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;max-width:1100px;margin:0 auto}
+.brand{font-weight:700;font-size:18px;display:flex;gap:10px;align-items:center}
+.logo{width:28px;height:28px;border-radius:8px;background:var(--accent);background-image:radial-gradient(circle,#fff 2.5px,transparent 3px);background-size:8px 8px;background-position:2px 2px}
+.gh{color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:7px 14px;border-radius:999px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px 40px}
+.hero{text-align:center;padding:30px 0 20px}
+.hero h1{font-size:clamp(28px,4.4vw,48px);line-height:1.08;margin:0 0 14px;letter-spacing:-.02em}
+.hero p{color:var(--muted);max-width:620px;margin:0 auto 26px;font-size:17px}
+.search{display:flex;align-items:center;max-width:520px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:6px 6px 6px 16px}
+.search:focus-within{border-color:var(--accent)}
+.at{color:var(--muted)}
+.search input{flex:1;min-width:0;font:inherit;font-size:17px;background:none;border:0;color:var(--text);padding:8px 2px;outline:none}
+button,.btn{font:inherit;font-weight:700;border:0;border-radius:10px;padding:11px 18px;background:var(--accent);color:#052e14;cursor:pointer;text-decoration:none;display:inline-block}
+button.ghost,.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+button:disabled{opacity:.5}
+.examples{margin-top:12px;color:var(--muted);font-size:14px}
+.examples a{color:var(--text);margin:0 4px;text-decoration:none;border-bottom:1px dashed var(--muted)}
+.err{color:#f87171;min-height:22px;margin:10px 0 0!important;font-size:15px!important}
+.out{margin-top:12px}
+canvas{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}
+.controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap}
+.swatches{display:flex;gap:8px}
+.swatches button{width:34px;height:34px;padding:0;border-radius:9px;border:2px solid transparent}
+.swatches button.on{border-color:#fff}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.foot{text-align:center;color:var(--muted);padding:24px;font-size:13px}

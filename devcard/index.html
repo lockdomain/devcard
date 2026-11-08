@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DevCard · Your GitHub profile as a card worth sharing</title>
+<meta name="description" content="Type a GitHub username and get a clean card with stars, top languages, best repos and 12 weeks of activity. Ready for X and LinkedIn. Free, no login.">
+<meta property="og:title" content="DevCard">
+<meta property="og:description" content="Your GitHub profile as a card worth sharing. Type a username, download a PNG.">
+<meta property="og:image" content="https://lockdomain.github.io/devcard/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2322c55e'/><g fill='white'><rect x='14' y='14' width='10' height='10' rx='2'/><rect x='27' y='14' width='10' height='10' rx='2' opacity='.5'/><rect x='40' y='14' width='10' height='10' rx='2'/><rect x='14' y='27' width='10' height='10' rx='2' opacity='.5'/><rect x='27' y='27' width='10' height='10' rx='2'/><rect x='40' y='27' width='10' height='10' rx='2' opacity='.3'/><rect x='14' y='40' width='10' height='10' rx='2'/><rect x='27' y='40' width='10' height='10' rx='2' opacity='.7'/><rect x='40' y='40' width='10' height='10' rx='2'/></g></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo"></span> DevCard</div>
+  <a class="gh" href="https://github.com/lockdomain/devcard" target="_blank" rel="noopener">GitHub</a>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <h1>Your GitHub, as a card worth sharing.</h1>
+    <p>Type a username. Get stars, top languages, best repos and 12 weeks of activity in one image that looks good on X and LinkedIn.</p>
+    <form class="search" id="form">
+      <span class="at">github.com/</span>
+      <input id="user" placeholder="username" autocomplete="off" autocapitalize="off" spellcheck="false" required>
+      <button>Make my card</button>
+    </form>
+    <div class="examples">Try <a href="#torvalds" data-u="torvalds">torvalds</a> <a href="#sindresorhus" data-u="sindresorhus">sindresorhus</a> <a href="#gaearon" data-u="gaearon">gaearon</a></div>
+    <p class="err" id="err"></p>
+  </section>
+
+  <section class="out" id="out" hidden>
+    <canvas id="card" width="1200" height="675"></canvas>
+    <div class="controls">
+      <div class="swatches" id="themes"></div>
+      <div class="btns">
+        <button id="download">Download PNG</button>
+        <button class="ghost" id="copy">Copy image</button>
+        <a class="ghost btn" id="share" target="_blank" rel="noopener">Share on X</a>
+      </div>
+    </div>
+    <p class="muted small">Uses the public GitHub API from your browser. No token, nothing stored. Activity covers public events GitHub keeps for about 90 days.</p>
+  </section>
+</main>
+<footer class="foot">Free and open source. Made by <a href="https://x.com/lockdomain" target="_blank" rel="noopener">@lockdomain</a></footer>
+<script src="stats.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
